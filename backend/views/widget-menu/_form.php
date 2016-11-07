@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
+use \trntv\aceeditor\AceEditor;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\WidgetMenu */
@@ -19,7 +20,7 @@ use yii\bootstrap\ActiveForm;
     <?php echo $form->field($model, 'title')->textInput(['maxlength' => 512]) ?>
 
     <?php echo $form->field($model, 'items')->widget(
-        trntv\aceeditor\AceEditor::className(),
+        AceEditor::className(),
         [
             'mode' => 'json'
         ]
